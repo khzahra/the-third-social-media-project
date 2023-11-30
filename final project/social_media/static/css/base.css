@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: black;
+
+}
+
+body{
+    background-color: #afa8a8;
+}
+
+nav {
+    padding: 20px;
+    background-color: #fff;
+}
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.z-content {
+    margin: 30px;
+}

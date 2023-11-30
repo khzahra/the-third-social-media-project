@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Post</title>
+    <link rel="stylesheet" href="{% static 'css/create_post.css' %}">
+</head>
+<body>
+    <header>
+        <h1>
+            Create A Post For {{request.user}}
+        </h1>
+        <hr>
+    </header>
+
+    <main>
+        <div class="container">
+            <form action="" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <label for="title">title</label>
+                <input type="text" name="title" placeholder="title" id="title">
+                <label for="image">Image</label>
+                <div class="image">
+                    <img src="{% static 'images/6686925.jpg' %}" alt="profile-image" width="200">
+                </div>
+                <input type="file" id="image" name="image">
+                <label for="body">caption</label>
+                <textarea name="body" id="body" cols="30" rows="10" placeholder="text ...."></textarea>
+                <div class="btns">
+                    <a href="{% url 'account:user_profile' request.user.id %}"><input class="cancel" type="button" value="Cancel"></a>
+                    <input class="save" type="submit" value="Save">
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

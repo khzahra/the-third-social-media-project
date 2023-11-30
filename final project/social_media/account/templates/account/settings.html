@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>settings</title>
+    <link rel="stylesheet" href="{% static 'css/settings.css' %}">
+</head>
+<body>
+    <header>
+        <h1>
+            <a href="{% url 'home:home' %}">Home</a> / Account settings
+        </h1>
+        <hr>
+    </header>
+
+    <main>
+        <div class="container">
+            <form action="" method="post" novalidate enctype="multipart/form-data">
+              {% csrf_token %}
+                <label for="img">Profile Image</label>
+                <div class="profile-pic">
+                    <img src="{{user_profile.profile_image.url}}" alt="profile-image" width="200">
+                </div>
+                <input type="file" id="img" name="image">
+                <label for="bio">Bio</label>
+                <textarea name="bio" id="bio" cols="30" rows="10" placeholder="Your Biography ...">{{user_profile.bio}}</textarea>
+                <label for="age">Age</label>
+                <input type="number" placeholder="age" id="age" name="age" value="{{user_profile.age}}">
+                <label for="email">Email</label>
+                <input type="email" placeholder="email" id="email" name="email" value="{{user.email}}">
+                <label for="location">Location</label>
+                <input type="text" placeholder="location" id="location" name="location" value="{{user_profile.location}}">
+                <div class="btns">
+                    <a href="{% url 'home:home' %}">
+                      <input class="cancel" type="button" value="Cancel">
+                    </a>
+                    <input class="save" type="submit" value="Save">
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

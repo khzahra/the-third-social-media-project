@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: black;
+
+}
+
+body{
+    background-color: #afa8a8;
+}
+
+header {
+    background-image: url('../images/dark_tint.png'), url('../images/timeline-1.jpg');
+    width: 100%;
+    height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 200px;
+}
+
+
+.text-white{
+    color: #fff;
+}
+
+
+nav {
+    padding: 50px;
+}
+
+.nav-flex-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+nav h2{
+    font-size: 2vw;
+    /*transition: font-size .2s;*/
+}
+
+/*nav h2:hover {*/
+/*    font-size: 3vw;*/
+/*}*/
+
+nav .material-symbols-outlined{
+    font-size: 2vw;
+}
+
+
+.dropbtn {
+    background-color: transparent;
+    outline: 0;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #afa8a8;
+    min-width: 500px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0;
+    font-size: 1.5vw;
+}
+
+.dropdown-content a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+.dropdown-content a:hover{
+    background-color: #d8cfcf;
+}
+
+
+.profile-picture{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+
+}
+
+.profile-picture img {
+    border-radius: 20%;
+}
+
+.info {
+    padding: 100px 50px 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+}
+
+.info-right {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.info-right>* {
+    margin-left: 20px;
+}
+.info-left>*{
+    margin-bottom: 20px;
+}
+
+
+.relative-pic {
+    position: relative;
+}
+
+.profile-picture {
+    position: absolute;
+    left: 20px;
+    bottom: -300px;
+}
+
+.main-navbar{
+
+    width: 50%;
+    margin:0 0 0 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.main-navbar-container {
+    width: 100%;
+    background-color: black;
+    padding: 35px;
+}
+
+
+.main-navbar .material-symbols-outlined{
+    color: #ddc80c
+}
+
+
+.container {
+    width: 80%;
+    background-color: #fff;
+    margin: 200px auto;
+    text-align: center;
+    padding: 50px;
+    min-height: 500px;
+}
+
+.content {
+    margin-bottom: 50px;
+}
+
+.content>* {
+    margin-bottom: 20px;
+}

@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+</head>
+<body>
+    <header class="z-navbar">
+        <div class="header-flex-container">
+            <h1>Social Media</h1>
+            <a href="{% url 'account:user_login' %}">Login</a>
+        </div>
+    </header>
+
+
+
+    <main>
+        <div class="div-sign-up">
+            <h3>Register</h3>
+            <form class="main-flex-box form-sign-up" action="" method="post" novalidate>
+                {% csrf_token %}
+                {{form}}
+<!--                <input type="text" placeholder="Username">-->
+<!--                <input type="email" placeholder="Email">-->
+<!--                <input type="password" placeholder="Password">-->
+<!--                <input type="password" placeholder="Confirm Password">-->
+                <input type="submit" placeholder="Sign Up">
+                <p>Do you have an account? <a href="{% url 'account:user_login' %}">Log in</a></p>
+            </form>
+        </div>
+
+
+    </main>
+
+
+
+
+
+
+
+</body>
+</html>

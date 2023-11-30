@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+body {
+    background-color: #afa8a8;
+}
+
+header {
+    margin: 50px;
+}
+
+hr{
+    margin-top: 20px;
+}
+
+main {
+    background-color: #fff;
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.profile-pic {
+    background-color: #726e6e0e;
+    width: 200px;
+    border-radius: 20px;;
+
+
+}
+
+.container form{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.container form>* {
+    margin: 5px;
+    padding: 10px;
+
+}
+
+.container form>input,
+.container form>textarea {
+    background-color: #726e6e0e;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+}
+
+.btns {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btns>* {
+    margin: 10px;
+    padding: 20px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+}
+
+.cancel {
+    background-color: #726e6e0e;
+    color: crimson;
+}
+
+.save {
+    background-color: crimson;
+    color: white;
+}
+
+
+.cancel {
+    border: none
+}
